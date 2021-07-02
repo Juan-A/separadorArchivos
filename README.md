@@ -1,14 +1,11 @@
-## Getting Started
+## Funcionalidad
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+En esta versión preliminar, mueve los archivos desde un directorio origen (no recursivo) hasta un directorio destino (dados en App.java), depositándolos a su vez en directorios según extensión del archivo.
 
-## Folder Structure
+## Librerías
 
 The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `libreriasExternas`: Contiene la libreria Apache Commons, de la que utilizamos `FilenameUtils.getExtension` para obtener las extensiones de un archivo.
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
