@@ -11,8 +11,8 @@ public class App {
     private static List<archivo> archivos = new ArrayList<>();
     private static List<File> listaArchivos = new ArrayList<>();
     private static List<String> extensiones = new ArrayList<>();
-    private static String DESTINO = "F://testeando//";
-    private static String ORIGEN = "F://Software//";
+    private final static String DESTINO = "F://testeando//";
+    private  final static String ORIGEN = "F://Software//";
     public static void main(String[] args) throws Exception {
         //Origen
         listaArchivos = new directorio(ORIGEN).getLista();
