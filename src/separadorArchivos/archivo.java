@@ -23,11 +23,14 @@ public class archivo {
         Path destinoPath = FileSystems.getDefault().getPath(destino);
 
         try {
-            Files.move(origenPath, destinoPath, StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(origenPath, destinoPath, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             System.err.println(e);
         }
     }
+   
+    
+
     @Override
     public String toString(){
         return this.origen;
