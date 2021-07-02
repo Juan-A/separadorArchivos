@@ -13,11 +13,13 @@ public class archivo {
 
     public archivo(String origen) {
         this.origen = origen;
-        
+
     }
-    public void setDestino(String destino){
+
+    public void setDestino(String destino) {
         this.destino = destino;
     }
+
     public void mover() {
         Path origenPath = FileSystems.getDefault().getPath(origen);
         Path destinoPath = FileSystems.getDefault().getPath(destino);
@@ -28,6 +30,7 @@ public class archivo {
             System.err.println(e);
         }
     }
+
     public void copiar() {
         Path origenPath = FileSystems.getDefault().getPath(origen);
         Path destinoPath = FileSystems.getDefault().getPath(destino);
@@ -38,11 +41,9 @@ public class archivo {
             System.err.println(e);
         }
     }
-   
-    
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.origen;
     }
 }
