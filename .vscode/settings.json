@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\juan1\\Descargas\\commons-io-2.10.0.jar"
+    ]
+}
