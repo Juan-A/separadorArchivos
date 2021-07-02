@@ -47,6 +47,7 @@ public class App {
                 String nombre = DESTINO+"//"+ext+"//"+listaArchivos.get(i).getName();
                 archivos.get(i).setDestino(nombre);
                 archivos.get(i).mover();
+                //archivos.get(i).copy();
             }
         }
         

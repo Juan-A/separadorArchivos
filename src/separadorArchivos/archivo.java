@@ -23,6 +23,16 @@ public class archivo {
         Path destinoPath = FileSystems.getDefault().getPath(destino);
 
         try {
+            Files.move(origenPath, destinoPath, StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            System.err.println(e);
+        }
+    }
+    public void copiar() {
+        Path origenPath = FileSystems.getDefault().getPath(origen);
+        Path destinoPath = FileSystems.getDefault().getPath(destino);
+
+        try {
             Files.copy(origenPath, destinoPath, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             System.err.println(e);
