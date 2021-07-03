@@ -8,17 +8,24 @@ import org.apache.commons.io.FilenameUtils;
 import separadorArchivos.*;
 
 public class App {
-    private static List<archivo> archivos = new ArrayList<>();
+    private final static List<archivo> archivos = new ArrayList<>();
     private static List<File> listaArchivos = new ArrayList<>();
-    private static List<String> extensiones = new ArrayList<>();
-    private final static String DESTINO = "F://testeando//";
-    private final static String ORIGEN = "F://Software//";
+    private final static List<String> extensiones = new ArrayList<>();
+
 
     public static void main(String[] args) throws Exception {
+        if (args.length != 2) {
+            System.out.println("No se introdujeron suficientes parámetros");
+            return;
+        }
+
+        final var ORIGEN = args[0];
+        final var DESTINO = args[1];
+
         // Origen
         listaArchivos = new directorio(ORIGEN).getLista();
 
-        // Destino (chequeo existencia y si no ex. lo creo)
+        // Destino (compruebo existencia y si no ex. lo creo)
         File destino = new File(DESTINO);
         if (!destino.exists()) {
             System.out.println("El directorio destino será creado.");
